@@ -13,21 +13,25 @@ def initTask(): #0111
     mutex4.acquire()
 
 def task1(number, delay): #1011
-    mutex1.acquire()
-    print("mot1")
-    mutex2.release()
+    while True:
+        mutex1.acquire()
+        print("mot1")
+        mutex2.release()
 
 def task2(number, delay): #1101
-    mutex2.acquire()
-    print("mot2")
-    mutex3.release()
+    while True:
+        mutex2.acquire()
+        print("mot2")
+        mutex3.release()
 
 def task3(number, delay): #1110
-    mutex3.acquire()
-    print("mot3")
-    mutex4.release()
+    while True:
+        mutex3.acquire()
+        print("mot3")
+        mutex4.release()
 
 def task4(number, delay): #0111
-    mutex4.acquire()
-    print("mot4")
-    mutex1.release()
+    while True:
+        mutex4.acquire()
+        print("mot4")
+        mutex1.release()
