@@ -128,5 +128,5 @@ def DTH_task(number, delay):
     print("starting DTH")
     sleep(500)
     while True:
-        DHT22_hum, DHT22_temp = getDHT22data(D0.ICU,D0)
+        DTH_hum, DTH_temp = getDHT22data(D0.ICU,D0)
         sleep(delay)

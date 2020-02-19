@@ -11,7 +11,7 @@ import DTH as dth
 streams.serial()
 
 def display(number, delay):
-    print(DHT_temp,DHT_hum)
+    print(DTH_temp,DTH_hum)
     sleep(delay)
 
 # create the various threads using the same function but passing different parameters        
