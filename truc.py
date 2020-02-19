@@ -5,6 +5,7 @@
 
 import streams
 
+
 # create a serial port with default parameters
 streams.serial()
 
