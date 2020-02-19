@@ -11,16 +11,16 @@ import DTH as dth
 streams.serial()
 
 def display(number, delay):
-    print(DTH_temp,DTH_hum)
+    print(dth.DTH_temp,dth.DTH_hum)
     sleep(delay)
 
 # create the various threads using the same function but passing different parameters        
 ts.initTask()
-thread(ts.task1,1,500)
-thread(ts.task2,2,600)
-thread(ts.task3,3,1300)
-thread(ts.task4,4,800)
-
+#thread(ts.task1,1,500)
+#thread(ts.task2,2,600)
+#thread(ts.task3,3,1300)
+#thread(ts.task4,4,800)
+thread(ts.taskADC)
 thread(dth.DTH_task, 5, 2500) #time must be more than 2000
-thread(display, 6, 1000)
+#thread(display, 6, 1000)
    

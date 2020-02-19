@@ -1,5 +1,6 @@
 import streams
 import threading
+import adc
 
 mutex1 = threading.Lock()
 mutex2 = threading.Lock()
@@ -39,3 +40,14 @@ def task4(number, delay): #0111
         print("mot4")
         mutex1.release()
         sleep(delay)
+        
+    
+def taskADC():
+    while True:
+        print("One sample:",adc.read(A5))
+        sleep(1000)
+        
+        
+        
+        
+        
