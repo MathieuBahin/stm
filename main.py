@@ -4,29 +4,18 @@
 ################################################################################
 
 import streams
-
+import task as ts
 
 # create a serial port with default parameters
 streams.serial()
 
-# Define a function to be used in the various threads.
-# Parameters are passed to the function when the thread is created and then used in the thread loop.
-# To be continuously executed by a thread a function requires an infinite loop,
-# otherwise when the function terminates the thread is closed
-     
-def threadfn(number,delay):    
-    
-    while True:                    
-        print("I am the thread",number)
-        print("I run every:",delay,"msec")
-        print()                # just add an empty line for console output readability 
-        sleep(delay)
+
 
 # create the various threads using the same function but passing different parameters        
-thread(threadfn,1,500)
-thread(threadfn,2,600)
-thread(threadfn,3,1300)
-thread(threadfn,4,800)
+ts.initTask()
+thread(ts.task1,1,500)
+thread(ts.task2,2,600)
+thread(ts.task3,3,1300)
+thread(ts.task4,4,800)
 
-#de la merde
    
